@@ -24,6 +24,10 @@
           "value": ["operation.all"]
         }
       }
+    },
+    {
+      "class": "extas\\components\\plugins\\jsonrpc\\DescribeOpencitySpecs",
+      "stage": "extas.api.jsonrpc.describe"
     }
   ],
   "jsonrpc_operations": [
