@@ -1,0 +1,52 @@
+{
+  "name": "extas/api-jsonrpc-opencity",
+  "plugins": [
+    {
+      "class": "extas\\components\\plugins\\api\\PluginJsonRpc",
+      "stage": "extas.api.app.init",
+      "install_on": "install",
+      "parameters": {
+        "routes": {
+          "name": "routes",
+          "value": {
+            "/specs[/{version}]": "_describe"
+          }
+        }
+      }
+    },
+    {
+      "class": "extas\\components\\plugins\\jsonrpc\\Describe",
+      "stage": "extas.jsonrpc.operation.run.specs",
+      "install_on": "install",
+      "parameters": {
+        "all": {
+          "name": "all",
+          "value": ["operation.all"]
+        }
+      }
+    }
+  ],
+  "jsonrpc_operations": [
+    {
+      "name": "operation.all",
+      "title": "JSON RPC operations",
+      "description": "JSON RPC operations list",
+      "class": "extas\\components\\operations\\jsonrpc\\Index",
+      "version": 0,
+      "specs": {
+        "request": {
+          "properties": {
+            "method": {
+              "type": "string"
+            }
+          }
+        },
+        "response": {
+          "properties": {
+            "type": "object"
+          }
+        }
+      }
+    }
+  ]
+}
