@@ -9,7 +9,7 @@
         "routes": {
           "name": "routes",
           "value": {
-            "/specs[/{version}]": "_describe"
+            "/specs[/{version}]": "specs"
           }
         }
       }

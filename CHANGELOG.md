@@ -1,3 +1,7 @@
+# 0.1.2
+
+- Mistype fixed.
+
 # 0.1.1
 
 - Plugin description added to the `extas.json`.
